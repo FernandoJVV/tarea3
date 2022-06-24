@@ -13,7 +13,7 @@ import tarea3.domain.Pais;
  * @author Cris Picado
  */
 public interface paisService {
-    public List<Pais> getClientes();
+    public List<Pais> getPais();
     
     public void save(Pais pais);//Si el id no esta creado lo crea, si esta creado hace el update
     

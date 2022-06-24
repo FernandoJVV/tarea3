@@ -14,16 +14,9 @@ import tarea3.domain.Pais;
 
 @Service
 public class paisServiceImpl implements paisService {
-    
+
     @Autowired
     private paisDao paisDao;
-    
-
-    @Override
-    @Transactional(readOnly = true)
-    public List<Pais> getClientes() {
-        return (List<Pais>) paisDao.findAll();
-    }
 
     @Override
     @Transactional
@@ -42,6 +35,11 @@ public class paisServiceImpl implements paisService {
     public Pais getPais(Pais pais) {
         return paisDao.findById(pais.getIdestado()).orElse(null);
     }
-    
-    
+
+    @Override
+    public List<Pais> getPais() {
+        return (List<Pais>) paisDao.findAll();
+
+    }
+
 }
