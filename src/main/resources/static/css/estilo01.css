@@ -1,0 +1,10 @@
+/*Selector universal para letra sans serif*/
+
+* {
+    font-family: sans-serif;
+}
+
+/*Selector universal para color de fondo blanco ahumado*/
+* {
+    background-color: whitesmoke;
+}
