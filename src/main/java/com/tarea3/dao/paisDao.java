@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tarea3.dao;
+package com.tarea3.dao;
 
 import org.springframework.data.repository.CrudRepository;
-import tarea3.domain.Pais;
+import com.tarea3.domain.Pais;
 
 public interface paisDao extends CrudRepository<Pais, Long>{
     

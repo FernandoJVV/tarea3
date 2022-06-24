@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tarea3.domain;
+package com.tarea3.domain;
 
 import java.io.Serializable;
 import javax.persistence.Entity;

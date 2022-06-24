@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tarea3.service;
+package com.tarea3.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tarea3.dao.paisDao;
-import tarea3.domain.Pais;
+import com.tarea3.dao.paisDao;
+import com.tarea3.domain.Pais;
 
 @Service
 public class paisServiceImpl implements paisService {
@@ -20,7 +20,7 @@ public class paisServiceImpl implements paisService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Pais> getPais() {
+    public List<Pais> getPaises() {
         return (List<Pais>) paisDao.findAll();
 
     }

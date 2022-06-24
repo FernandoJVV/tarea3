@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tarea3.service;
+package com.tarea3.service;
 
 import java.util.List;
-import tarea3.domain.Pais;
+import com.tarea3.domain.Pais;
 
 /**
  *
  * @author Cris Picado
  */
 public interface paisService {
-    public List<Pais> getPais();
+    public List<Pais> getPaises();
     
     public void save(Pais pais);//Si el id no esta creado lo crea, si esta creado hace el update
     

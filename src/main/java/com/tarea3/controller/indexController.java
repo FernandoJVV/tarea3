@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tarea3.controller;
+package com.tarea3.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import lombok.var;
@@ -12,8 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import tarea3.domain.Pais;
-import tarea3.service.paisService;
+import com.tarea3.domain.Pais;
+import com.tarea3.service.paisService;
 
 /**
  *
@@ -28,8 +28,8 @@ public class indexController {
 
     @GetMapping("/")
     public String inicio(Model model) {
-        var pais = paisService.getPais();
-        model.addAttribute("Paises", pais);
+        var paises = paisService.getPaises();
+        model.addAttribute("paises", paises);
         return "index";
     }
 
@@ -44,14 +44,14 @@ public class indexController {
         return "redirect:/";
     }
 
-    @GetMapping("/modificarPais/{idestado}")
+    @GetMapping("/modificarPais/{idEstado}")
     public String modificarPais(Pais pais, Model model) {
         pais = paisService.getPais(pais);
         model.addAttribute("Pais", pais);
         return "modificarPais";
     }
 
-    @GetMapping("/eliminarPais/{idestado}")
+    @GetMapping("/eliminarPais/{idEstado}")
     public String eliminarPais(Pais pais) {
         paisService.delete(pais);
         return "redirect:/";
