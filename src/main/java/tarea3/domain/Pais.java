@@ -6,16 +6,18 @@
 package tarea3.domain;
 
 import java.io.Serializable;
-import org.springframework.data.annotation.Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Table;
+import lombok.Data;
 
-/**
- *
- * @author Cris Picado
- */
+@Data
+@Entity
+@Table(name="practica")
 public class Pais implements Serializable{
-    
+   
     private static final long serialversionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

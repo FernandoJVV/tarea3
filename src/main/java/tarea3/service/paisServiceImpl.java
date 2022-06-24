@@ -5,10 +5,43 @@
  */
 package tarea3.service;
 
-/**
- *
- * @author Cris Picado
- */
-public class paisServiceImpl {
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import tarea3.dao.paisDao;
+import tarea3.domain.Pais;
+
+@Service
+public class paisServiceImpl implements paisService {
+    
+    @Autowired
+    private paisDao paisDao;
+    
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Pais> getClientes() {
+        return (List<Pais>) paisDao.findAll();
+    }
+
+    @Override
+    @Transactional
+    public void save(Pais pais) {
+        paisDao.save(pais);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Pais pais) {
+        paisDao.delete(pais);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Pais getPais(Pais pais) {
+        return paisDao.findById(pais.getIdestado()).orElse(null);
+    }
+    
     
 }
