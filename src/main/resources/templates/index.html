@@ -5,7 +5,7 @@
         <meta charset="UTF-8"/>
     </head>
     <body>
-        <!-- Falta la implementacion de la plantilla -->
+        <header th:replace="layout/plantilla :: header"/>
         <h2>Paises</h2>
         <a th:href="@{/nuevoPais}">Nuevo Pais</a>
 
@@ -39,7 +39,6 @@
         <div th:if="${paises == null or paises.empty}">
             No tenemos lista de paises que mostrar..
         </div>
-        <!-- Falta la implementacion de la plantilla -->
-
+        <footer th:replace="layout/plantilla :: footer"/>
     </body>
 </html>
