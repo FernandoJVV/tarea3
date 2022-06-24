@@ -15,7 +15,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="practica")
+@Table(name="estado")
 public class Pais implements Serializable{
    
     private static final long serialversionUID = 1L;

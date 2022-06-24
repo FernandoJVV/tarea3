@@ -19,6 +19,13 @@ public class paisServiceImpl implements paisService {
     private paisDao paisDao;
 
     @Override
+    @Transactional(readOnly = true)
+    public List<Pais> getPais() {
+        return (List<Pais>) paisDao.findAll();
+
+    }
+    
+    @Override
     @Transactional
     public void save(Pais pais) {
         paisDao.save(pais);
@@ -36,10 +43,6 @@ public class paisServiceImpl implements paisService {
         return paisDao.findById(pais.getIdestado()).orElse(null);
     }
 
-    @Override
-    public List<Pais> getPais() {
-        return (List<Pais>) paisDao.findAll();
-
-    }
+    
 
 }

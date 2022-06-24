@@ -8,10 +8,7 @@ package tarea3.dao;
 import org.springframework.data.repository.CrudRepository;
 
 import tarea3.domain.Pais;
-/**
- *
- * @author Cris Picado
- */
+
 public interface paisDao extends CrudRepository<Pais, Long>{
     
 }
