@@ -40,7 +40,7 @@ public class paisServiceImpl implements paisService {
     @Override
     @Transactional(readOnly = true)
     public Pais getPais(Pais pais) {
-        return paisDao.findById(pais.getIdestado()).orElse(null);
+        return paisDao.findById(pais.getIdEstado()).orElse(null);
     }
 
     
