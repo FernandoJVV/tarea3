@@ -47,7 +47,7 @@ public class indexController {
     @GetMapping("/modificarPais/{idEstado}")
     public String modificarPais(Pais pais, Model model) {
         pais = paisService.getPais(pais);
-        model.addAttribute("Pais", pais);
+        model.addAttribute("pais", pais);
         return "modificarPais";
     }
 
